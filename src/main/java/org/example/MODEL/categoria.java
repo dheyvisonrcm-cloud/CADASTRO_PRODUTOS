@@ -21,21 +21,22 @@ public class categoria {
         this.setNome(nome);
     }
 
+    public String getNome() {
+        return nome;
+    }
+
+    public categoria setNome(String nome) {
+        this.nome = nome;
+        return this;
+    }
 
     public Long getId() {
         return Id;
     }
 
-    public void setId(Long id) {
+    public categoria setId(Long id) {
         Id = id;
-    }
-
-    public String getNome() {
-        return nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
+        return this;
     }
 
     @Override

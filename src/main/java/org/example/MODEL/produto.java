@@ -38,67 +38,73 @@ public class produto {
     }
 
 
-    public long getId() {
-        return id;
-    }
+     public categoria getCategoria(categoria categoria) {
+         return this.categoria;
+     }
 
-    public void setId(long id) {
-        this.id = id;
-    }
+     public produto setCategoria(categoria categoria) {
+         this.categoria = categoria;
+         return this;
+     }
 
-    public String getNome() {
-        return nome;
-    }
+     public LocalDateTime getDataDeCadastro() {
+         return dataDeCadastro;
+     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
+     public produto setDataDeCadastro(LocalDateTime dataDeCadastro) {
+         this.dataDeCadastro = dataDeCadastro;
+         return this;
+     }
 
-    public String getDescricao() {
-        return descricao;
-    }
+     public BigDecimal getPreco() {
+         return preco;
+     }
 
-    public void setDescricao(String descricao) {
-        this.descricao = descricao;
-    }
+     public produto setPreco(BigDecimal preco) {
+         this.preco = preco;
+         return this;
+     }
 
-    public BigDecimal getPreco() {
-        return preco;
-    }
+     public String getDescricao() {
+         return descricao;
+     }
 
-    public void setPreco(BigDecimal preco) {
-        this.preco = preco;
-    }
+     public produto setDescricao(String descricao) {
+         this.descricao = descricao;
+         return this;
+     }
 
-    public LocalDateTime getDataDeCadastro() {
-        return dataDeCadastro;
-    }
+     public String getNome() {
+         return nome;
+     }
 
-    public void setDataDeCadastro(LocalDateTime dataDeCadastro) {
-        this.dataDeCadastro = dataDeCadastro;
-    }
+     public produto setNome(String nome) {
+         this.nome = nome;
+         return this;
+     }
 
-    public categoria getCategoria() {
-        return categoria;
-    }
+     public long getId() {
+         return id;
+     }
 
-    public void setCategoria(categoria categoria) {
-        this.categoria = categoria;
-    }
+     public produto setId(long id) {
+         this.id = id;
+         return this;
+     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (o == null || getClass() != o.getClass()) return false;
-        produto produto = (produto) o;
-        return id == produto.id && Objects.equals(nome, produto.nome) && Objects.equals(descricao, produto.descricao) && Objects.equals(preco, produto.preco) && Objects.equals(dataDeCadastro, produto.dataDeCadastro) && Objects.equals(categoria, produto.categoria);
-    }
+     @Override
+     public boolean equals(Object o) {
+         if (o == null || getClass() != o.getClass()) return false;
+         produto produto = (produto) o;
+         return Objects.equals(nome, produto.nome);
+     }
 
-    @Override
-    public int hashCode() {
-        return Objects.hashCode(id);
-    }
+     @Override
+     public int hashCode() {
+         return Objects.hashCode(nome);
+     }
 
-    @Override
+     @Override
     public String toString() {
 
         return nome.toUpperCase();
