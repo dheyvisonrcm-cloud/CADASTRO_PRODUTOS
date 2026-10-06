@@ -1,8 +1,8 @@
 
 Dheyvison Macedo
 
-GitHub: @dheyvisonrcm-cloud
-LinkedIn: dheyvison-macedo
+GitHub: [@dheyvisonrcm-cloud](https://github.com/dheyvisonrcm-cloud)
+LinkedIn: www.linkedin.com/in/dheyvison-macedo
 
 # 📦 Cadastro de Produtos
 
