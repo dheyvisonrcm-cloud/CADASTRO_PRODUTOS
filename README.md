@@ -1,3 +1,9 @@
+
+Dheyvison Macedo
+
+GitHub: @dheyvisonrcm-cloud
+LinkedIn: dheyvison-macedo
+
 # 📦 Cadastro de Produtos
 
 Sistema de cadastro de produtos e categorias em Java, desenvolvido para praticar Programação Orientada a Objetos, persistência em memória e interface com o usuário.
