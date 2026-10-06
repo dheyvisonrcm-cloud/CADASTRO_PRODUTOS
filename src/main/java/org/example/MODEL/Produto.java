@@ -12,7 +12,7 @@ import java.util.Objects;
  /// DEPOIS, GEREI A COMPARAÇÃO + GETTERS AND SETTERS
 /// shift duas vezes para encapsular
 
-public class produto {
+public class Produto {
 
     private long id;
 
@@ -26,10 +26,10 @@ public class produto {
 
     private categoria categoria;
 
-    public produto() {
+    public Produto() {
     }
 
-    public produto(long id, String nome, String descricao, BigDecimal preco, LocalDateTime dataDeCadastro, categoria categoria) {
+    public Produto(long id, String nome, String descricao, BigDecimal preco, LocalDateTime dataDeCadastro, categoria categoria) {
         this.setNome(nome);
         this.setDescricao(descricao);
         this.setPreco(preco);
@@ -38,11 +38,11 @@ public class produto {
     }
 
 
-     public categoria getCategoria(categoria categoria) {
+     public categoria getCategoria() {
          return this.categoria;
      }
 
-     public produto setCategoria(categoria categoria) {
+     public Produto setCategoria(categoria categoria) {
          this.categoria = categoria;
          return this;
      }
@@ -51,7 +51,7 @@ public class produto {
          return dataDeCadastro;
      }
 
-     public produto setDataDeCadastro(LocalDateTime dataDeCadastro) {
+     public Produto setDataDeCadastro(LocalDateTime dataDeCadastro) {
          this.dataDeCadastro = dataDeCadastro;
          return this;
      }
@@ -60,7 +60,7 @@ public class produto {
          return preco;
      }
 
-     public produto setPreco(BigDecimal preco) {
+     public Produto setPreco(BigDecimal preco) {
          this.preco = preco;
          return this;
      }
@@ -69,7 +69,7 @@ public class produto {
          return descricao;
      }
 
-     public produto setDescricao(String descricao) {
+     public Produto setDescricao(String descricao) {
          this.descricao = descricao;
          return this;
      }
@@ -78,7 +78,7 @@ public class produto {
          return nome;
      }
 
-     public produto setNome(String nome) {
+     public Produto setNome(String nome) {
          this.nome = nome;
          return this;
      }
@@ -87,7 +87,7 @@ public class produto {
          return id;
      }
 
-     public produto setId(long id) {
+     public Produto setId(long id) {
          this.id = id;
          return this;
      }
@@ -95,7 +95,7 @@ public class produto {
      @Override
      public boolean equals(Object o) {
          if (o == null || getClass() != o.getClass()) return false;
-         produto produto = (produto) o;
+         Produto produto = (Produto) o;
          return Objects.equals(nome, produto.nome);
      }
 

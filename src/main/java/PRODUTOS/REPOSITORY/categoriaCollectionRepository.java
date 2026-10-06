@@ -1,5 +1,6 @@
 package PRODUTOS.REPOSITORY;
 
+import org.example.MODEL.Produto;
 import org.example.MODEL.categoria;
 
 import javax.swing.*;
@@ -56,6 +57,7 @@ public class categoriaCollectionRepository {
 
 
     }
+
 
 
 }

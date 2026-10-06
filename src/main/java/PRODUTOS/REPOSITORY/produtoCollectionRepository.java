@@ -1,6 +1,7 @@
 package PRODUTOS.REPOSITORY;
 
-import org.example.MODEL.produto;
+import org.example.MODEL.Produto;
+import org.example.MODEL.categoria;
 
 import javax.swing.*;
 import java.math.BigDecimal;
@@ -11,13 +12,13 @@ import java.util.Vector;
 public class produtoCollectionRepository {
 
 
-    private static List<produto> produtos;
+    public static List<Produto> Produtos;
 
     static {
 
-        produtos = new Vector<>();
+        Produtos = new Vector<>();
 
-        produto celular = new produto();
+        Produto celular = new Produto();
 
         celular.setNome("iphone  14")
                 .setDescricao("um celular")
@@ -27,11 +28,11 @@ public class produtoCollectionRepository {
 
     }
 
-    public static produto save(produto produto) {
+    public static Produto save(Produto produto) {
 
-        if(!produtos.contains(produto)) {
-            produtos.add(produto);
-            produto.setId(produtos.size()+ 1);
+        if(!Produtos.contains(produto)) {
+            Produtos.add(produto);
+            produto.setId(Produtos.size()+ 1);
 
             return produto;
 
@@ -41,5 +42,22 @@ public class produtoCollectionRepository {
         }
     }
 
+    public static List<Produto> findAll() {
+        return Produtos;
 
-}
+
+    }
+
+
+    public static List<Produto> findByCategoria(categoria categoria) {
+        return Produtos.stream().filter(p -> p.getCategoria().equals(categoria)).toList();
+    }
+
+    public static Produto findById(int id) {
+        for (Produto p : findAll()) {
+            if (p.getId() == id) {
+                return p;
+            }
+        }
+        return null;
+}}
